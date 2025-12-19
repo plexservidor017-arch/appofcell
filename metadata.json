@@ -1,0 +1,5 @@
+{
+  "name": "Copy of FitDroid Manager",
+  "description": "Um aplicativo de autogerenciamento pessoal focado em treinamento físico. Apresenta um cronômetro de Boxe especializado com lógica de rounds e um rastreador de Corrida com registro de localização.",
+  "requestFramePermissions": []
+}
