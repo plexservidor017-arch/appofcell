@@ -1,4 +1,4 @@
-export type MainTab = 'treino' | 'higiene' | 'alimentacao' | 'estudo';
+export type MainTab = 'treino' | 'higiene' | 'alimentacao' | 'estudo' | 'configuracoes';
 export type TrainingTab = 'boxe' | 'corrida';
 
 export type TimerPhase = 'work' | 'rest' | 'finished';
