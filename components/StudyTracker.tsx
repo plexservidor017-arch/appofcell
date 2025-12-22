@@ -284,9 +284,22 @@ const StudyTracker: React.FC = () => {
                                     setStudyMinutes(val);
                                     if (!isActive && pomodoroPhase === 'study') setSeconds(val * 60);
                                 }}
-                                className="flex-1 accent-indigo-500"
+                                className="flex-1 accent-indigo-500 cursor-pointer h-2 bg-slate-800 rounded-lg appearance-none"
                               />
-                              <span className="font-mono text-indigo-400 font-bold w-8 text-right">{studyMinutes}</span>
+                              <input 
+                                type="number" 
+                                min="1"
+                                max="180"
+                                value={studyMinutes}
+                                onChange={(e) => {
+                                    const val = parseInt(e.target.value);
+                                    if(!isNaN(val) && val > 0) {
+                                        setStudyMinutes(val);
+                                        if (!isActive && pomodoroPhase === 'study') setSeconds(val * 60);
+                                    }
+                                }}
+                                className="w-20 bg-slate-950 border border-slate-700 rounded-lg px-2 py-2 text-center font-mono text-indigo-400 font-bold focus:outline-none focus:border-indigo-500"
+                              />
                           </div>
                       </div>
                       
@@ -301,9 +314,22 @@ const StudyTracker: React.FC = () => {
                                     setRestMinutes(val);
                                     if (!isActive && pomodoroPhase === 'rest') setSeconds(val * 60);
                                 }}
-                                className="flex-1 accent-emerald-500"
+                                className="flex-1 accent-emerald-500 cursor-pointer h-2 bg-slate-800 rounded-lg appearance-none"
                               />
-                              <span className="font-mono text-emerald-400 font-bold w-8 text-right">{restMinutes}</span>
+                              <input 
+                                type="number" 
+                                min="1"
+                                max="60"
+                                value={restMinutes}
+                                onChange={(e) => {
+                                    const val = parseInt(e.target.value);
+                                    if(!isNaN(val) && val > 0) {
+                                        setRestMinutes(val);
+                                        if (!isActive && pomodoroPhase === 'rest') setSeconds(val * 60);
+                                    }
+                                }}
+                                className="w-20 bg-slate-950 border border-slate-700 rounded-lg px-2 py-2 text-center font-mono text-emerald-400 font-bold focus:outline-none focus:border-emerald-500"
+                              />
                           </div>
                       </div>
 
